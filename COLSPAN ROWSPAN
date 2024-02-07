@@ -1,0 +1,31 @@
+<!doctype>
+<html>
+<body>
+<h1><marquee>colspan/rowspan</marquee></h1>
+<table border=50% width=10%>
+<tr>
+<tr>
+	<th>DAY/TIME</th>
+	<th>9-10</th>
+	<th> 10-11 </th>
+	<th> 11-11:30 </th>
+</tr>
+<tr>
+	<th>MON</th>
+	<td colspan="2">LSS</td>
+	<td rowspan="4">BREAK</td>
+</tr>
+<tr>
+	<th>TUE</th>
+	<td>OOP</td>
+	<td>WAP</td>
+</tr>
+
+<tr>
+	<th>WED</th>
+	<td>OOP</td>
+	<td>WAP</td>
+</tr>
+</tr>
+</body>
+</html>
