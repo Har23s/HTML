@@ -1,0 +1,21 @@
+#PADDING AND BORDER 
+<htmL>
+<body>
+<table border=50% width=1 style="padding:10px;border-spacing:20px">
+<tr>
+	<th>JOB TITLE</th>
+	<td>JT1</td>
+	<td>JT2</td>
+</tr>
+<tr>
+	<th>skill requirement</th>
+	<td>skill 1</td>
+	<td>skill 2</td>
+</tr>
+<tr>
+	<th> no.of position </th>
+	<td> 2 </td>
+	<td> 3 </td>
+</tr>
+</body>
+</html>
