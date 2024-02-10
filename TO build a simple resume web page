@@ -2,47 +2,50 @@
 <head>
       <title> RESUME portfolio</title>
 </head>
-<body bdcolor="grey">
+<body bgcolor="grey">
   <img src="", hright="90px" width="100px" alt="photo">
 <h1> <b>ABCD</b> </h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p1> software engineer</p1>
+<br> ph: 123456789
+<br> Email: <a href="https://">abcd@gmail.com</a>
+<hr> </hr>
+            <u>
+                  <h1> <b> ACADEMICS</b> <h1>
+                  <hr> </hr>
+                  <ol>
+                        <li> BTECH </li>
+                        <p2>banglore university </p2> 
+                        <br> <b>8.00/10 CGPA </b>
+                  
+                  
+                        <li> MTECH </li>
+                        <p3> bangalore university </p3>
+                        <br> <b>9.00/10 CGPA</br>
+                        </ol>
+<hr></hr>
+                  <h1>  Skills </h1>
+                  <hr></hr>
+                        <table border="5" >
+                        <tr>
+                        <th> Language</th>
+                        <td> java </td>
+                        <td> c++</td>
+                        </tr>
+                        <tr>
+                        <th> WAP </th>
+                        <td> HTML</td>
+                        <td> CSS </td>
+                        </tr>
+                        </table>
+<hr></hr>
+                        <h1> Projects</h1>
+                        <ol type="i">
+                        <li> Daily expense trackersystem</li>
+                        Lang used:PhP myadmin
+                        <li> online bus ticket system</li>
+                        Lang used:C++ and Oracle
+                        </ol>
+                        
 </body>
 </html>
     
