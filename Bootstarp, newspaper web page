@@ -1,0 +1,127 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap News paper</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+          .fakeimg {
+    height: 200px;
+    background: #aaa;
+        }
+
+  </style>
+</head>
+<body>
+
+<div class="p-5 bg-danger text-white text-center">
+  <h1>THE HINDU</h1>
+  <p>Let The Truth Prevail</p>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">INDIA</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">WORLD</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CINEMA</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#">SPORTS</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>SPORTS</h2>
+      <h5>RCB WON THE IPL TITLE:</h5>
+      <img src="/home/harsha/Downloads/ipl.png" class="rounded">
+        <p>Its a great Victory for Rcb in this year aganist CSK</p>
+          <div class="dropdown" data-bs-theme="dark">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      LATEST NEWS
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">RAM MANDIR</a></li>
+      <li><a class="dropdown-item" href="#">2024 Election</a></li>
+      <li><a class="dropdown-item" href="#">ISRO New satelite</a></li>
+    </ul>
+  </div>
+        <div class="offcanvas offcanvas-end" id="demo">
+         <div class="offcanvas-header">
+    <h1 class="offcanvas-title">PROFILE</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>HOME</p>
+    <p>SUBSCRIBE</p>
+<p>LOG IN</p>
+    <button class="btn btn-secondary" type="button">ARTICLE</button>
+  </div>
+</div>
+<hr>
+
+        <div class="container mt-3">
+  <h2>INFORMATION</h2>
+  <div class="alert alert-success">
+    <strong>EDITORIAL</strong> You should <a href="#" class="alert-link">read this message</a>.
+  </div>
+  <div class="alert alert-info">
+    <strong>CINEMA</strong> You should <a href="#" class="alert-link">read this message</a>.
+  </div>
+  <div class="alert alert-warning">
+    <strong>EDUCATIONAL</strong> You should <a href="#" class="alert-link">read this message</a>.
+  </div>
+        <div class="container-fluid mt-3">
+  <h3>YOUR ARTCLE</h3>
+  <p> click the below button to submit your article</p>
+ <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+    CLICK ME
+  </button>
+</div>
+</div>
+
+        <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-8">
+      <h1> HEADLINES </h1>
+      <h2><u>RAM MANDIR</u></h2>
+      <h5>The great day for all Indians, jan 23, 2024</h5>
+      <img src="/home/harsha/Downloads/temple.png" class="rounded">
+      <p>Rama, an incarnation of Vishnu, is a Hindu deity. According to the ancient Indian epic, Ramayana, Rama was born in Ayodhya </p>
+<h2><u>DEFENCE</u></h2>
+      <h5>Rafale bought to india</h5>
+      <img src="/home/harsha/Downloads/defence.png" class="rounded">
+      <p>The French government has submitted its response to India's Rs 50,000 crore tender to purchase 26 Rafale Marine fighter jets for the Indian Nav>
+
+French authorities responsible for the sale of military hardware to foreign countries submitted the response to the Indian government and the officials >
+
+</p> </div>
+       <hr>
+
+
+<section>
+        <div class="container">
+  <h3 class="text-center">Contact</h3>
+  <div class="row">
+    <div class="col-md-4">
+      <p><span class="glyphicon glyphicon-map-marker"></span>India, Blr</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phon: +91 9999992233</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
+    </div>
+    </div>
+</section>
+</body>
+</html>
+
+
