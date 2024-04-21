@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <style>
+        .contact {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .contact h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Contacts</h1>
+    <div id="contacts"></div>
+    <script >
+      const contactsElement = document.getElementById('contacts');
+
+      // Function to create HTML for a single contact
+      function createContactHTML(person) {
+        const contactDiv = document.createElement('div');
+        contactDiv.classList.add('contact');
+
+        const nameH3 = document.createElement('h3');
+        nameH3.textContent = person.name;
+        contactDiv.appendChild(nameH3);
+
+        const p = document.createElement('p');
+        p.textContent = person.address;
+        contactDiv.appendChild(p);
+
+        const pEmail = document.createElement('p');
+        pEmail.textContent = `Email: ${person.email}`;
+        contactDiv.appendChild(pEmail);
+
+        const pPhone = document.createElement('p');
+        pPhone.textContent = `Phone: ${person.phone}`;
+        contactDiv.appendChild(pPhone);
+
+        return contactDiv;
+      }
+
+      // Function to load and process XML data
+      function loadContacts() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'contacts.xml', true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            const xmlDoc = xhr.responseXML;
+            const persons = xmlDoc.getElementsByTagName('person');
+
+            for (let i = 0; i < persons.length; i++) {
+              const person = persons[i];
+              const name = person.getElementsByTagName('name')[0].textContent;
+              const address = person.getElementsByTagName('address')[0].textContent;
+              const email = person.getElementsByTagName('email')[0].textContent;
+              const phone = person.getElementsByTagName('phone')[0].textContent;
+
+              const contactHTML = createContactHTML({ name, address, email, phone });
+              contactsElement.appendChild(contactHTML);
+            }
+          }
+        };
+        xhr.send();
+      }
+
+      loadContacts();
+      
+    </script>
+</body>
+</html>
+
+// To store a  details in xml file 
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+  <person>
+    <name>John Doe</name>
+    <address>123 Main St, Anytown, CA 12345</address>
+    <email>john.doe@example.com</email>
+    <phone>(555) 555-1234</phone>
+  </person>
+  <person>
+    <name>Jane Smith</name>
+    <address>456 Elm St, Anytown, CA 12345</address>
+    <email>jane.smith@example.com</email>
+    <phone>(555) 555-5678</phone>
+  </person>
+  <person>
+    <name>Michael Brown</name>
+    <address>789 Oak St, Anytown, CA 12345</address>
+    <email>michael.brown@example.com</email>
+    <phone>(555) 555-9012</phone>
+  </person>
+</contacts>
