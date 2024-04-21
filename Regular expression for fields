@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Registration Form</h1>
+  <form id="registrationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <span class="error" id="nameError"></span><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+    <span class="error" id="emailError"></span><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+    <span class="error" id="passwordError"></span><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required><br>
+    <span class="error" id="phoneError"></span><br>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('registrationForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const phoneInput = document.getElementById('phone');
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+    const phoneError = document.getElementById('phoneError');
+
+    const nameRegex = /^[a-zA-Z]+ [a-zA-Z]+$/;  // Allows only letters and spaces for full name
+    const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z\d\-]+)\.[a-zA-Z]{2,}$/;
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[^\s]{8,}$/;  // Minimum 8 characters with at least 1 digit, 1 lowercase, 1 uppercase letter
+    const phoneRegex = /^\d{10}$/; // Allows only 10 digits for phone number (US format)
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      let valid = true;
+
+      // Validate name
+      if (!nameRegex.test(nameInput.value)) {
+        nameError.textContent = "Please enter your full name (letters and spaces only)";
+        valid = false;
+      } else {
+        nameError.textContent = "";
+      }
+
+      // Validate email
+      if (!emailRegex.test(emailInput.value)) {
+        emailError.textContent = "Please enter a valid email address";
+        valid = false;
+      } else {
+        emailError.textContent = "";
+      }
+
+      // Validate password
+      if (!passwordRegex.test(passwordInput.value)) {
+        passwordError.textContent = "Password must be at least 8 characters with 1 digit, 1 lowercase, and 1 uppercase letter";
+        valid = false;
+      } else {
+        passwordError.textContent = "";
+      }
+
+      // Validate phone number
+      if (!phoneRegex.test(phoneInput.value)) {
+        phoneError.textContent = "Please enter a valid 10-digit phone number";
+        valid = false;
+      } else {
+        phoneError.textContent = "";
+      }
+
+      if (valid) {
+        // Form is valid, submit the data (replace with your submission logic)
+        alert("Form submitted successfully!");
+      }
+    });
+  </script>
+</body>
+</html>
